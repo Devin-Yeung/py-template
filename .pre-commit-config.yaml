@@ -11,14 +11,7 @@ repos:
     -   id: ruff
         args:
         - --fix
--   repo: local
+-   repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 23.7.0
     hooks:
-    -   id: yapf
-        name: yapf
-        entry: yapf
-        language: python
-        types: [python]
-        args: ["--recursive", "--in-place"]
-        require_serial: false
-        additional_dependencies: []
-        minimum_pre_commit_version: '0'
+      - id: black
